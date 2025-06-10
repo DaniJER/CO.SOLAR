@@ -1,5 +1,4 @@
 "use client";
-import EngineeringIcon from "@mui/icons-material/Engineering";
 import "../style-components/maintenance.css";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
@@ -17,48 +16,51 @@ const Maintenance = () => {
 
   return (
     <div className="mantenance-style">
-      <img
-        src="/img/cosolar.png"
-        alt="Logo de CoSolar"
-        className="img-cosolar"
-      />
-      <h2>Nos encontramos en mantenimiento para mejorar tu experiencia</h2>
-      <h3>
-        Pero no te preocupes, te podemos asesorar por nuestros canales de
-        WhatsApp
-      </h3>
+      <div className="contenido">
+        <h2>Nos encontramos en mantenimiento para mejorar tu experiencia</h2>
+        <h3>
+          Pero no te preocupes, te podemos asesorar por nuestros canales de
+          WhatsApp
+        </h3>
 
-      <p>Cordoba y Sucre</p>
-      <a href={whatsappSucreUrl} target="_blank" rel="noopener noreferrer">
-        <button>
-          <WhatsAppIcon className="whatsapp-icon" />
-          Contactar por WhatsApp
-        </button>
-      </a>
-
-      <p>Caucasia y Antioquia</p>
-      <div className="contact-me">
+        <p>Cordoba y Sucre</p>
+        <div className="contact-me1"></div>
         <a
-          href={whatsappCaucasia1Url}
+          href={whatsappSucreUrl}
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener 
+          noreferrer"
         >
-          <button>
+          <button className="button1">
             <WhatsAppIcon className="whatsapp-icon" />
             Contactar por WhatsApp
           </button>
         </a>
 
-        <a
-          href={whatsappCaucasia2Url}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button>
-            <WhatsAppIcon className="whatsapp-icon" />
-            Contactar por WhatsApp
-          </button>
-        </a>
+        <p>Caucasia y Antioquia</p>
+        <div className="contact-me2">
+          <a
+            href={whatsappCaucasia1Url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button>
+              <WhatsAppIcon className="whatsapp-icon" />
+              Contactar por WhatsApp
+            </button>
+          </a>
+
+          <a
+            href={whatsappCaucasia2Url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button>
+              <WhatsAppIcon className="whatsapp-icon" />
+              Contactar por WhatsApp
+            </button>
+          </a>
+        </div>
       </div>
     </div>
   );
