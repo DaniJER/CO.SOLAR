@@ -254,11 +254,11 @@ const Form = () => {
         </label>
       </div>
 
-      <div class="mb-3">
-        <label htmlFor="formFile" class="form-label">
+      <div className="mb-3">
+        <label htmlFor="formFile" className="form-label">
           Suba su servicio de energia más reciente
         </label>
-        <input class="form-control" type="file" id="formFile" />
+        <input className="form-control" type="file" id="formFile" />
       </div>
     </form>
   );
