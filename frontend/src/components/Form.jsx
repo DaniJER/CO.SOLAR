@@ -3,10 +3,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "@/style-components/form.css";
 import React, { useState } from "react";
 import data from "../data/departamentos_ciudades_colombia.json";
-import { div } from "@tensorflow/tfjs";
+// Eliminado: import { div } from "@tensorflow/tfjs"; // ¡Esta línea fue eliminada!
 
 const Form = () => {
-  //Funcionalidad para el select de departamentos y ciudades
+  // Funcionalidad para el select de departamentos y ciudades
   const [departamento, setDepartamento] = useState("");
   const [ciudades, setCiudades] = useState([]);
   const [ciudad, setCiudad] = useState("");
@@ -53,6 +53,7 @@ const Form = () => {
         const newElectroData = Array(num > 0 ? num : 0)
           .fill(null)
           .map((_, index) => {
+            // Asegúrate de usar los datos existentes si hay, o proporcionar valores por defecto
             return prevElectroData[index] || { tipo: "", cantidad: "" };
           });
         return newElectroData;
@@ -100,7 +101,8 @@ const Form = () => {
         key={`electro-${index}`}
         className="mb-4 p-3 border rounded shadow-sm"
       >
-        <p>Datos del Electrodoméstico #{index + 1}</p>
+        <h4>Datos del Electrodoméstico #{index + 1}</h4>{" "}
+        {/* Cambiado p a h4 para mejor semántica */}
         <div className="form-floating mt-3">
           <select
             className="form-select"
@@ -119,11 +121,23 @@ const Form = () => {
             <option value="cafetera">Cafetera</option>
             <option value="licuadora">Licuadora</option>
             <option value="otros">Otros</option>
-            {/* Puedes añadir más opciones aquí */}
           </select>
           <label htmlFor={`type-electro-${index}`}>
             Tipo de Electrodoméstico
           </label>
+        </div>
+        {/* --- AÑADIDO: INPUT PARA LA CANTIDAD DEL ELECTRODOMÉSTICO --- */}
+        <div className="form-floating mt-3">
+          <input
+            type="number"
+            className="form-control"
+            id={`quantity-electro-${index}`}
+            placeholder="Cantidad"
+            min="1"
+            value={electrodomesticosData[index]?.cantidad || ""}
+            onChange={(e) => handleElectroQuantityChange(index, e)}
+          />
+          <label htmlFor={`quantity-electro-${index}`}>Cantidad</label>
         </div>
       </div>
     ));
@@ -160,7 +174,7 @@ const Form = () => {
   };
 
   // --- MANEJADORES PARA LOS INPUTS DE AIRES DINÁMICOS ---
-  const [airesData, setAiresData] = useState([]); // Moved up for clarity
+  const [airesData, setAiresData] = useState([]); // Movido arriba para claridad
 
   const handleAireTypeChange = (index, e) => {
     const { value } = e.target;
@@ -176,7 +190,7 @@ const Form = () => {
     setAiresData((prevAiresData) => {
       const updatedAiresData = [...prevAiresData];
       updatedAiresData[index] = { ...updatedAiresData[index], voltaje: value };
-      return updatedAiresData;
+      return updatedAiresData; // <-- Asegúrate de que esta línea esté completa
     });
   };
 

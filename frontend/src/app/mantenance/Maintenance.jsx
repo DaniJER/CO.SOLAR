@@ -1,5 +1,5 @@
 "use client";
-import "../style-components/maintenance.css";
+import "./style-components/maintenance.css";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 const Maintenance = () => {

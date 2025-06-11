@@ -10,8 +10,9 @@ export const metadata = {
 export default function Home() {
   return (
     <div className={styles.page}>
-      <main className={styles.main}>{/* <Maintenance /> */}</main>
-      <footer className={styles.footer}></footer>
+      <main className={styles.main}>
+        <h1>Pagina principal</h1>
+      </main>
     </div>
   );
 }
