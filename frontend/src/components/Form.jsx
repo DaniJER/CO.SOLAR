@@ -121,7 +121,7 @@ const Form = () => {
         <label htmlFor="floatingSelect">Ciudad</label>
       </div>
 
-      <div class="form-floating">
+      <div className="form-floating">
         <select
           className="form-select"
           id="floatingSelect"
