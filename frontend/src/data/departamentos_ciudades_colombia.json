@@ -1,0 +1,154 @@
+{
+  "Amazonas": [
+    "Leticia",
+    "Puerto Nariño"
+  ],
+  "Antioquia": [
+    "Medellín",
+    "Bello",
+    "Itagüí",
+    "Envigado",
+    "Apartadó",
+    "Turbo"
+  ],
+  "Arauca": [
+    "Arauca",
+    "Arauquita",
+    "Saravena"
+  ],
+  "Atlántico": [
+    "Barranquilla",
+    "Soledad",
+    "Malambo",
+    "Sabanalarga"
+  ],
+  "Bolívar": [
+    "Cartagena",
+    "Magangué",
+    "Turbaco",
+    "Arjona"
+  ],
+  "Boyacá": [
+    "Tunja",
+    "Duitama",
+    "Sogamoso",
+    "Chiquinquirá"
+  ],
+  "Caldas": [
+    "Manizales",
+    "La Dorada",
+    "Villamaría"
+  ],
+  "Caquetá": [
+    "Florencia",
+    "San Vicente del Caguán"
+  ],
+  "Casanare": [
+    "Yopal",
+    "Aguazul",
+    "Villanueva"
+  ],
+  "Cauca": [
+    "Popayán",
+    "Santander de Quilichao"
+  ],
+  "Cesar": [
+    "Valledupar",
+    "Aguachica"
+  ],
+  "Chocó": [
+    "Quibdó",
+    "Istmina"
+  ],
+  "Córdoba": [
+    "Montería",
+    "Lorica",
+    "Sahagún"
+  ],
+  "Cundinamarca": [
+    "Bogotá",
+    "Soacha",
+    "Zipaquirá",
+    "Girardot",
+    "Facatativá"
+  ],
+  "Guainía": [
+    "Inírida"
+  ],
+  "Guaviare": [
+    "San José del Guaviare"
+  ],
+  "Huila": [
+    "Neiva",
+    "Pitalito",
+    "Garzón"
+  ],
+  "La Guajira": [
+    "Riohacha",
+    "Maicao",
+    "Uribia"
+  ],
+  "Magdalena": [
+    "Santa Marta",
+    "Ciénaga",
+    "Fundación"
+  ],
+  "Meta": [
+    "Villavicencio",
+    "Acacías",
+    "Granada"
+  ],
+  "Nariño": [
+    "Pasto",
+    "Tumaco",
+    "Ipiales"
+  ],
+  "Norte de Santander": [
+    "Cúcuta",
+    "Ocaña",
+    "Pamplona"
+  ],
+  "Putumayo": [
+    "Mocoa",
+    "Puerto Asís"
+  ],
+  "Quindío": [
+    "Armenia",
+    "Calarcá"
+  ],
+  "Risaralda": [
+    "Pereira",
+    "Dosquebradas"
+  ],
+  "San Andrés y Providencia": [
+    "San Andrés",
+    "Providencia"
+  ],
+  "Santander": [
+    "Bucaramanga",
+    "Floridablanca",
+    "Girón",
+    "Piedecuesta"
+  ],
+  "Sucre": [
+    "Sincelejo",
+    "Corozal"
+  ],
+  "Tolima": [
+    "Ibagué",
+    "Espinal",
+    "Honda"
+  ],
+  "Valle del Cauca": [
+    "Cali",
+    "Palmira",
+    "Buenaventura",
+    "Tuluá"
+  ],
+  "Vaupés": [
+    "Mitú"
+  ],
+  "Vichada": [
+    "Puerto Carreño"
+  ]
+}
