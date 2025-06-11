@@ -212,7 +212,7 @@ const Form = () => {
                 <option value="1">Convencional</option>
                 <option value="2">Inverter</option>
               </select>
-              <label for="floatingSelect">Tipo de aire</label>
+              <label htmlFor="floatingSelect">Tipo de aire</label>
             </div>
 
             <div className="form-floating mt-3">
@@ -224,7 +224,7 @@ const Form = () => {
                 <option value="2">220W</option>
                 <option value="3">Trifasico</option>
               </select>
-              <label for="floatingSelect">Voltaje</label>
+              <label htmlFor="floatingSelect">Voltaje</label>
             </div>
           </>
         )}
@@ -237,7 +237,7 @@ const Form = () => {
           name="radio2"
           id="radioNoche"
         />
-        <label className="form-check-label" for="radioNoche">
+        <label className="form-check-label" htmlFor="radioNoche">
           Día y noche
         </label>
       </div>
@@ -249,13 +249,13 @@ const Form = () => {
           name="radio2"
           id="radioDia"
         />
-        <label className="form-check-label" for="radioDia">
+        <label className="form-check-label" htmlFor="radioDia">
           Solo día
         </label>
       </div>
 
       <div class="mb-3">
-        <label for="formFile" class="form-label">
+        <label htmlFor="formFile" class="form-label">
           Suba su servicio de energia más reciente
         </label>
         <input class="form-control" type="file" id="formFile" />
