@@ -15,6 +15,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 import MenuIcon from "@mui/icons-material/Menu"; // Icono de hamburguesa
 import LightbulbOutlinedIcon from "@mui/icons-material/LightbulbOutlined"; // Icono de bombilla para el logo
+import CoSolarIcon from "@/components/icons/CoSolarIcon";
 
 import Link from "next/link"; // Importa Link de Next.js
 
@@ -45,10 +46,31 @@ const NavBar = () => {
 
   return (
     <AppBar position="static" color="transparent">
-      {" "}
-      {/* El color de la barra (AppBar) sigue siendo 'primary' */}
       <Toolbar>
         {/* Logo/Título para pantallas grandes */}
+        <IconButton
+          edge="start" // Alinea el botón al inicio
+          color="inherit" // Hereda el color del AppBar (normalmente blanco para texto/iconos)
+          aria-label="logo"
+          sx={{ mr: 2 }} // Margen a la derecha para separarlo del texto
+          href="/" // Haz que el icono sea un enlace a la página de inicio
+        >
+          {/*
+            ¡Usa tu componente CoSolarIcon!
+            Puedes aplicarle la prop 'sx' directamente para control de tamaño, color, etc.
+          */}
+          <CoSolarIcon
+            sx={{
+              fontSize: 32, // Tamaño del icono (ajusta según necesites, ej. 24, 32, 40)
+              // color: 'white', // Puedes forzar un color, pero 'inherit' suele ser suficiente si el AppBar tiene buen contraste
+              // transition: 'transform 0.2s ease-in-out', // Ejemplo de animación
+              // '&:hover': {
+              //   transform: 'scale(1.1)',
+              // },
+            }}
+          />
+        </IconButton>
+
         <Box
           sx={{
             flexGrow: 1,

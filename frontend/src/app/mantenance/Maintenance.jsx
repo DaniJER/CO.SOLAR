@@ -2,6 +2,7 @@
 import "./style-components/maintenance.css";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
+//PAGINA DE MANTENIMIENTO PROVISIONAL
 const Maintenance = () => {
   // Obfuscar número para evitar scrapers simples
   const phoneSucre = ["301", "847", "33", "95"].join("");

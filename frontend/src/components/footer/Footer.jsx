@@ -164,7 +164,10 @@ const Footer = () => {
 
         {/* Información Adicional o Legal */}
         <Box sx={{ textAlign: "center", mt: 2 }}>
-          <Typography variant="body2" sx={{ color: "rgba(255,255,255,0.7)" }}>
+          <Typography
+            variant="body2"
+            sx={{ color: "rgba(255, 255, 255, 0.77)" }}
+          >
             📍 Sede Principal: Cra. 20 No. 6A-05 La Troncal, Caucasia,
             Antioquia, Colombia.
           </Typography>
@@ -172,8 +175,14 @@ const Footer = () => {
           <Typography variant="body2" sx={{ color: "rgba(255,255,255,0.7)" }}>
             📞 Contacto: +57 3XX XXX XXXX | 📧 administración@cosolar.com
           </Typography>
-          <Typography variant="body2" sx={{ color: "rgba(255,255,255,0.7)" }}>
-            Creado por el equipo de desarrollo Co.Solar
+        </Box>
+        <br></br>
+        <Box sx={{ textAlign: "center", mt: 2 }}>
+          <Typography
+            variant="body2"
+            sx={{ color: "rgba(255, 255, 255, 0.45)" }}
+          >
+            Equipo Desarrollo CO.SOLAR
           </Typography>
         </Box>
       </Container>
