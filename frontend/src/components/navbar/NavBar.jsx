@@ -1,7 +1,6 @@
 // src/components/ResponsiveAppBar.jsx
 
 "use client";
-
 import React, { useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
@@ -14,7 +13,6 @@ import Box from "@mui/material/Box";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 import MenuIcon from "@mui/icons-material/Menu";
-
 import Link from "next/link";
 
 const pages = [
@@ -42,7 +40,12 @@ const NavBar = () => {
   const logoPngPath = "/img/cosolar.png"; // ¡RUTA DE TU LOGO!
 
   return (
-    <AppBar position="static" color="transparent">
+    <AppBar
+      position="static"
+      color="transparent"
+      elevation={0}
+      sx={{ zIndex: theme.zIndex.appBar }}
+    >
       <Toolbar sx={{ minHeight: { xs: 64, sm: 80 }, alignItems: "center" }}>
         {/* --- Logo y Título para pantallas GRANDES (sm y mayores) --- */}
         <Box

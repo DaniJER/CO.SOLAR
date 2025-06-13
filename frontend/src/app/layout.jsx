@@ -1,12 +1,5 @@
-// src/app/layout.jsx
-
-// --- ¡IMPORTANTE! ELIMINAMOS "use client"; de aquí para que sea un Server Component ---
-
-// --- Importaciones de Next.js y CSS global ---
 import { Inter } from "next/font/google";
 import "./globals.css";
-
-// --- ¡NUEVO! Importamos nuestro nuevo componente de proveedores del cliente ---
 import { Providers } from "@/app/provider";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -62,25 +55,12 @@ export const metadata = {
     canonical: "https://www.cosolar.com", //
   },
 
-  // verification: {
-  //   google: "tu-codigo-de-verificacion-de-google", //
-  //   bing: "tu-codigo-de-verificacion-de-bing", //
-  // },
-
   openGraph: {
     title: "CoSolar | Invierte en Energía Solar para Tu Futuro",
     description:
       "Líderes en soluciones de energía solar en Colombia. Paneles solares de alta calidad y servicio experto para hogares y empresas. ¡Cotiza gratis!",
     url: "https://www.cosolar.com.co", // <<== ¡IMPORTANTE! Reemplaza
     siteName: "Co.Solar",
-    // images: [
-    //   {
-    //     url: "https://www.cosolar.com/images/og-image-principal.jpg", // <<== Asegúrate de que esta imagen exista y tenga un tamaño adecuado (ej. 1200x630)
-    //     width: 1200,
-    //     height: 630,
-    //     alt: "Paneles Solares de CoSolar en una Instalación",
-    //   },
-    // ],
     locale: "es_CO",
     type: "website",
   },

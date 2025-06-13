@@ -1,21 +1,34 @@
 // src/app/providers.jsx
-"use client"; // Client Component
+"use client";
 
 import React from "react";
 import { ThemeProvider } from "@mui/material/styles";
-import theme from "@/themes/themes"; // Tu importación de tema
-import NavBar from "@/components/navbar/NavBar"; // Tu componente NavBar
+import theme from "@/themes/themes";
+import NavBar from "@/components/navbar/NavBar";
 import Footer from "@/components/footer/Footer";
+import { Box } from "@mui/material";
 
-// Este componente envolverá toda la lógica de cliente
 export function Providers({ children }) {
   return (
     <ThemeProvider theme={theme}>
-      <nav>
-        <NavBar />
-      </nav>
-      {children}
-      <Footer />
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          minHeight: "100vh",
+        }}
+      >
+        <nav>
+          <NavBar />
+        </nav>
+
+        {/* Aquí el contenido crece para ocupar el espacio disponible */}
+        <Box component="main" sx={{ flexGrow: 1 }}>
+          {children}
+        </Box>
+
+        <Footer />
+      </Box>
     </ThemeProvider>
   );
 }
