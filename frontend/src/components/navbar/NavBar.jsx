@@ -1,6 +1,6 @@
 // src/components/ResponsiveAppBar.jsx
 
-"use client"; // Esencial para usar hooks de React como useState y useEffect
+"use client";
 
 import React, { useState } from "react";
 import AppBar from "@mui/material/AppBar";
@@ -13,16 +13,13 @@ import MenuItem from "@mui/material/MenuItem";
 import Box from "@mui/material/Box";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
-import MenuIcon from "@mui/icons-material/Menu"; // Icono de hamburguesa
-import LightbulbOutlinedIcon from "@mui/icons-material/LightbulbOutlined"; // Icono de bombilla para el logo
-import CoSolarIcon from "@/components/icons/CoSolarIcon";
+import MenuIcon from "@mui/icons-material/Menu";
 
-import Link from "next/link"; // Importa Link de Next.js
+import Link from "next/link";
 
-// Define tus páginas de navegación
 const pages = [
   { name: "Inicio", path: "/" },
-  { name: "Cotizar", path: "/quote" }, // Asume que tienes una página /cotizar para tu formulario
+  { name: "Cotizar", path: "/quote" },
   { name: "Servicios", path: "/services" },
   { name: "Testimonios", path: "/cases" },
   { name: "Contacto", path: "/contact" },
@@ -30,8 +27,6 @@ const pages = [
 
 const NavBar = () => {
   const theme = useTheme();
-  // `sm` es el breakpoint para pantallas pequeñas (600px y arriba).
-  // `isMobile` será true si la pantalla es menor a 600px.
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -44,56 +39,55 @@ const NavBar = () => {
     setAnchorElNav(null);
   };
 
+  const logoPngPath = "/images/CoSolarLogo.png"; // ¡RUTA DE TU LOGO!
+
   return (
     <AppBar position="static" color="transparent">
       <Toolbar>
-        {/* Logo/Título para pantallas grandes */}
-        <IconButton
-          edge="start" // Alinea el botón al inicio
-          color="inherit" // Hereda el color del AppBar (normalmente blanco para texto/iconos)
-          aria-label="logo"
-          sx={{ mr: 2 }} // Margen a la derecha para separarlo del texto
-          href="/" // Haz que el icono sea un enlace a la página de inicio
-        >
-          {/*
-            ¡Usa tu componente CoSolarIcon!
-            Puedes aplicarle la prop 'sx' directamente para control de tamaño, color, etc.
-          */}
-          <CoSolarIcon
-            sx={{
-              fontSize: 32, // Tamaño del icono (ajusta según necesites, ej. 24, 32, 40)
-              // color: 'white', // Puedes forzar un color, pero 'inherit' suele ser suficiente si el AppBar tiene buen contraste
-              // transition: 'transform 0.2s ease-in-out', // Ejemplo de animación
-              // '&:hover': {
-              //   transform: 'scale(1.1)',
-              // },
-            }}
-          />
-        </IconButton>
-
+        {/* --- Logo y Título para pantallas GRANDES (sm y mayores) --- */}
+        {/* Aquí el Box ya NO tiene flexGrow: 1. Solo ocupa el espacio de su contenido. */}
         <Box
           sx={{
-            flexGrow: 1,
-            display: { xs: "none", sm: "flex" },
+            display: { xs: "none", sm: "flex" }, // Visible solo en pantallas sm y mayores
             alignItems: "center",
           }}
         >
-          <LightbulbOutlinedIcon sx={{ mr: 1, color: "black" }} />{" "}
-          {/* Icono en negro */}
+          {/* Logo como PNG y enlace */}
+          <Link
+            href="/"
+            passHref
+            style={{
+              textDecoration: "none",
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
+            <Box
+              component="img"
+              src={logoPngPath}
+              alt="Co.Solar Logo"
+              sx={{
+                height: "5rem", // Ajusta la altura de tu logo PNG
+                width: "6rem", // Asegúrate de que esto mantenga la proporción, o usa width: 'auto'
+                // Ya no necesitamos margin: 0 auto aquí.
+                marginRight: 1, // Espacio entre el logo y el texto (si lo hay)
+              }}
+            />
+          </Link>
           <Typography
             variant="h6"
             noWrap
-            component={Link} // Usa Link de Next.js
+            component={Link}
             href="/"
             sx={{
               mr: 2,
               fontFamily: "monospace",
               fontWeight: 700,
               letterSpacing: ".1rem",
-              color: "black", // <--- ¡Color del logo en negro para pantallas grandes!
+              color: "black",
               textDecoration: "none",
               "&:hover": {
-                color: "#333", // Un negro un poco más oscuro al pasar el ratón
+                color: "#333",
               },
             }}
           >
@@ -101,85 +95,95 @@ const NavBar = () => {
           </Typography>
         </Box>
 
-        {/* Menú de hamburguesa y logo para pantallas pequeñas */}
+        {/* --- Spacer para empujar los botones a la derecha en pantallas grandes --- */}
+        {/* Este Box ocupa el espacio restante */}
+        <Box sx={{ flexGrow: 1, display: { xs: "none", sm: "flex" } }} />
+
+        {/* --- Menú de hamburguesa y Logo para pantallas PEQUEÑAS (xs) --- */}
         <Box
           sx={{
-            flexGrow: 1,
-            display: { xs: "flex", sm: "none" },
+            flexGrow: 1, // Mantenemos flexGrow aquí para que el icono de hamburguesa y el logo empujen los elementos (aunque no hay más elementos a la derecha aquí).
+            display: { xs: "flex", sm: "none" }, // Visible solo en pantallas xs
             alignItems: "center",
           }}
         >
           <IconButton
             size="large"
-            aria-label="account of current user"
+            aria-label="open navigation menu"
             aria-controls="menu-appbar"
             aria-haspopup="true"
             onClick={handleOpenNavMenu}
-            color="inherit" // El color del icono de hamburguesa será el de la AppBar
+            color="inherit"
           >
-            <MenuIcon />
+            <MenuIcon sx={{ color: "black" }} />
           </IconButton>
           <Menu
             id="menu-appbar"
             anchorEl={anchorElNav}
-            anchorOrigin={{
-              vertical: "bottom",
-              horizontal: "left",
-            }}
+            anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
             keepMounted
-            transformOrigin={{
-              vertical: "top",
-              horizontal: "left",
-            }}
+            transformOrigin={{ vertical: "top", horizontal: "left" }}
             open={Boolean(anchorElNav)}
             onClose={handleCloseNavMenu}
-            sx={{
-              display: { xs: "block", sm: "none" },
-            }}
+            sx={{ display: { xs: "block", sm: "none" } }}
           >
             {pages.map((page) => (
               <MenuItem
                 key={page.name}
                 onClick={handleCloseNavMenu}
-                component={Link} // Usa Link de Next.js
+                component={Link}
                 href={page.path}
               >
                 <Typography textAlign="center" sx={{ color: "black" }}>
-                  {" "}
-                  {/* <--- ¡Color del texto del menú en negro! */}
                   {page.name}
                 </Typography>
               </MenuItem>
             ))}
           </Menu>
-          {/* Logo para pantallas pequeñas al lado del menú de hamburguesa */}
-          <LightbulbOutlinedIcon
-            sx={{ mr: 1, display: { xs: "block", sm: "none" }, color: "black" }}
-          />{" "}
-          {/* Icono en negro */}
+
+          {/* Logo como PNG y enlace para pantallas pequeñas */}
+          <Link
+            href="/"
+            passHref
+            style={{
+              textDecoration: "none",
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
+            <Box
+              component="img"
+              src={logoPngPath}
+              alt="Co.Solar Logo"
+              sx={{
+                height: "3.5rem", // Ajusta la altura de tu logo PNG para pantallas pequeñas
+                width: "4.2rem", // Asegúrate de que esto mantenga la proporción, o usa width: 'auto'
+                marginRight: 1,
+                display: { xs: "block", sm: "none" }, // Mostrar solo en XS
+              }}
+            />
+          </Link>
           <Typography
             variant="h6"
             noWrap
-            component={Link} // Usa Link de Next.js
+            component={Link}
             href="/"
             sx={{
               mr: 2,
               fontFamily: "monospace",
               fontWeight: 700,
               letterSpacing: ".1rem",
-              color: "black", // <--- ¡Color del logo en negro para pantallas pequeñas!
+              color: "black",
               textDecoration: "none",
               display: { xs: "block", sm: "none" }, // Mostrar solo en XS
-              "&:hover": {
-                color: "#333", // Un negro un poco más oscuro al pasar el ratón
-              },
+              "&:hover": { color: "#333" },
             }}
           >
             CoSolar
           </Typography>
         </Box>
 
-        {/* Botones de navegación para pantallas grandes */}
+        {/* --- Botones de navegación para pantallas GRANDES (sm y mayores) --- */}
         <Box sx={{ display: { xs: "none", sm: "flex" } }}>
           {pages.map((page) => (
             <Button
@@ -187,13 +191,11 @@ const NavBar = () => {
               onClick={handleCloseNavMenu}
               sx={{
                 my: 2,
-                color: "black", // <--- ¡Color de los botones de navegación en negro!
+                color: "black",
                 display: "block",
-                "&:hover": {
-                  color: "#333", // Un negro un poco más oscuro al pasar el ratón
-                },
+                "&:hover": { color: "#333" },
               }}
-              component={Link} // Usa Link de Next.js
+              component={Link}
               href={page.path}
             >
               {page.name}
