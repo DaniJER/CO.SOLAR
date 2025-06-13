@@ -39,27 +39,25 @@ const NavBar = () => {
     setAnchorElNav(null);
   };
 
-  const logoPngPath = "/images/CoSolarLogo.png"; // ¡RUTA DE TU LOGO!
+  const logoPngPath = "/img/cosolar.png"; // ¡RUTA DE TU LOGO!
 
   return (
     <AppBar position="static" color="transparent">
-      <Toolbar>
+      <Toolbar sx={{ minHeight: { xs: 64, sm: 80 }, alignItems: "center" }}>
         {/* --- Logo y Título para pantallas GRANDES (sm y mayores) --- */}
-        {/* Aquí el Box ya NO tiene flexGrow: 1. Solo ocupa el espacio de su contenido. */}
         <Box
           sx={{
-            display: { xs: "none", sm: "flex" }, // Visible solo en pantallas sm y mayores
+            display: { xs: "none", sm: "flex" },
             alignItems: "center",
           }}
         >
-          {/* Logo como PNG y enlace */}
           <Link
             href="/"
             passHref
             style={{
-              textDecoration: "none",
               display: "flex",
               alignItems: "center",
+              height: "3.5rem", // altura razonable
             }}
           >
             <Box
@@ -67,46 +65,26 @@ const NavBar = () => {
               src={logoPngPath}
               alt="Co.Solar Logo"
               sx={{
-                height: "5rem", // Ajusta la altura de tu logo PNG
-                width: "6rem", // Asegúrate de que esto mantenga la proporción, o usa width: 'auto'
-                // Ya no necesitamos margin: 0 auto aquí.
-                marginRight: 1, // Espacio entre el logo y el texto (si lo hay)
+                height: "100%",
+                width: "auto",
+                objectFit: "contain",
               }}
             />
           </Link>
-          <Typography
-            variant="h6"
-            noWrap
-            component={Link}
-            href="/"
-            sx={{
-              mr: 2,
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".1rem",
-              color: "black",
-              textDecoration: "none",
-              "&:hover": {
-                color: "#333",
-              },
-            }}
-          >
-            Co.Solar
-          </Typography>
         </Box>
-
         {/* --- Spacer para empujar los botones a la derecha en pantallas grandes --- */}
-        {/* Este Box ocupa el espacio restante */}
         <Box sx={{ flexGrow: 1, display: { xs: "none", sm: "flex" } }} />
 
         {/* --- Menú de hamburguesa y Logo para pantallas PEQUEÑAS (xs) --- */}
         <Box
           sx={{
-            flexGrow: 1, // Mantenemos flexGrow aquí para que el icono de hamburguesa y el logo empujen los elementos (aunque no hay más elementos a la derecha aquí).
-            display: { xs: "flex", sm: "none" }, // Visible solo en pantallas xs
+            flexGrow: 1,
+            display: { xs: "flex", sm: "none" },
             alignItems: "center",
+            justifyContent: "space-between", // <- Mantiene el menú a la izquierda y el logo a la derecha
           }}
         >
+          {/* Menú hamburguesa a la izquierda */}
           <IconButton
             size="large"
             aria-label="open navigation menu"
@@ -120,35 +98,49 @@ const NavBar = () => {
           <Menu
             id="menu-appbar"
             anchorEl={anchorElNav}
-            anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
+            anchorOrigin={{
+              vertical: "bottom",
+              horizontal: "left",
+            }}
             keepMounted
-            transformOrigin={{ vertical: "top", horizontal: "left" }}
+            transformOrigin={{
+              vertical: "top",
+              horizontal: "left",
+            }}
             open={Boolean(anchorElNav)}
             onClose={handleCloseNavMenu}
-            sx={{ display: { xs: "block", sm: "none" } }}
+            sx={{
+              display: { xs: "block", sm: "none" },
+            }}
           >
             {pages.map((page) => (
-              <MenuItem
-                key={page.name}
-                onClick={handleCloseNavMenu}
-                component={Link}
-                href={page.path}
-              >
-                <Typography textAlign="center" sx={{ color: "black" }}>
-                  {page.name}
-                </Typography>
+              <MenuItem key={page.name} onClick={handleCloseNavMenu}>
+                <Link
+                  href={page.path}
+                  style={{
+                    textDecoration: "none",
+                    color: "inherit",
+                    width: "100%",
+                  }}
+                >
+                  <Typography textAlign="center">{page.name}</Typography>
+                </Link>
               </MenuItem>
             ))}
           </Menu>
 
-          {/* Logo como PNG y enlace para pantallas pequeñas */}
+          {/* Logo a la derecha para móviles */}
           <Link
             href="/"
             passHref
             style={{
               textDecoration: "none",
-              display: "flex",
-              alignItems: "center",
+              display: "flex", // Hacemos el Link un contenedor flex
+              alignItems: "center", // Centra la imagen verticalmente dentro del Link
+              justifyContent: "center", // Centra la imagen horizontalmente dentro del Link
+              height: "6.5vh", // Define un tamaño fijo para el Link en móviles (ej. 6.5vh)
+              width: "auto", // Deja que el ancho se ajuste proporcionalmente
+              // border: '1px solid green', // Para depurar el tamaño del Link
             }}
           >
             <Box
@@ -156,31 +148,22 @@ const NavBar = () => {
               src={logoPngPath}
               alt="Co.Solar Logo"
               sx={{
-                height: "3.5rem", // Ajusta la altura de tu logo PNG para pantallas pequeñas
-                width: "4.2rem", // Asegúrate de que esto mantenga la proporción, o usa width: 'auto'
-                marginRight: 1,
-                display: { xs: "block", sm: "none" }, // Mostrar solo en XS
+                maxHeight: "100%", // La imagen no será más alta que el Link
+                maxWidth: "100%", // La imagen no será más ancha que el Link
+                height: "auto",
+                width: "auto",
+                objectFit: "contain",
+                // display: { xs: "block", sm: "none" }, // Esto lo maneja el Link padre
               }}
             />
           </Link>
-          <Typography
-            variant="h6"
-            noWrap
-            component={Link}
-            href="/"
-            sx={{
-              mr: 2,
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".1rem",
-              color: "black",
-              textDecoration: "none",
-              display: { xs: "block", sm: "none" }, // Mostrar solo en XS
-              "&:hover": { color: "#333" },
-            }}
-          >
-            CoSolar
-          </Typography>
+          {/*
+            El Typography "CoSolar" para móviles estaba en un Box con display: { xs: "block", sm: "none" }
+            Si quieres que el texto "CoSolar" aparezca junto al logo en móviles, necesitas
+            moverlo dentro del mismo Link con el Box del logo.
+            Si no lo necesitas, simplemente no lo incluyas en esta sección del Link.
+            Lo he quitado para simplificar el centrado del logo.
+          */}
         </Box>
 
         {/* --- Botones de navegación para pantallas GRANDES (sm y mayores) --- */}
