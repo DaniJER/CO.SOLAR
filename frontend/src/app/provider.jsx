@@ -29,18 +29,16 @@ export function Providers({ children }) {
     <ThemeProvider theme={theme}>
       <Box
         sx={{
-          display: "flex",
+          display: { sx: "flex", sm: "80", xs: "64" },
           flexDirection: "column",
-          minHeight: "100vh",
+          minHeight: "100dvh",
+          overflowX: "hidden",
         }}
       >
         <nav ref={navBarRef}>
-          {" "}
-          {/* Attach the ref to the <nav> element */}
           <NavBar />
         </nav>
 
-        {/* The main content area, which will flex-grow */}
         <Box component="main" sx={{ flexGrow: 1 }}>
           {children}
         </Box>

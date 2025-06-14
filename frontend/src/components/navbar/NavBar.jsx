@@ -46,7 +46,13 @@ const NavBar = () => {
       elevation={0}
       sx={{ zIndex: (theme) => theme.zIndex.appBar }}
     >
-      <Toolbar sx={{ minHeight: { xs: 64, sm: 80 }, alignItems: "center" }}>
+      <Toolbar
+        sx={{
+          minHeight: { xs: 64, sm: 80 },
+          alignItems: "center",
+          zIndex: "1",
+        }}
+      >
         {/* --- Logo y Título para pantallas GRANDES (sm y mayores) --- */}
         <Box
           sx={{
@@ -179,7 +185,7 @@ const NavBar = () => {
                 my: 2,
                 color: "white",
                 display: "block",
-                "&:hover": { color: "#333" },
+                "&:hover": { textDecoration: "underLine" },
               }}
               component={Link}
               href={page.path}
