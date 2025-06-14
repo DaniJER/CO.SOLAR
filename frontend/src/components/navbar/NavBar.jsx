@@ -44,7 +44,7 @@ const NavBar = () => {
       position="static"
       color="transparent"
       elevation={0}
-      sx={{ zIndex: theme.zIndex.appBar }}
+      sx={{ zIndex: (theme) => theme.zIndex.appBar }}
     >
       <Toolbar sx={{ minHeight: { xs: 64, sm: 80 }, alignItems: "center" }}>
         {/* --- Logo y Título para pantallas GRANDES (sm y mayores) --- */}
@@ -177,7 +177,7 @@ const NavBar = () => {
               onClick={handleCloseNavMenu}
               sx={{
                 my: 2,
-                color: "black",
+                color: "white",
                 display: "block",
                 "&:hover": { color: "#333" },
               }}

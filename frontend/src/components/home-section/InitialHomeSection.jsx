@@ -1,11 +1,14 @@
-// src/components/InitialHomeSection.jsx
+// src/components/home-section/InitialHomeSection.jsx
 
 import React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
+// Ya NO necesitas importar useTheme aquí
+// Ya NO necesitas la prop navBarHeight
 
-const InitialHomeSection = ({ navBarHeight }) => {
+const InitialHomeSection = () => {
+  // Ya no recibe navBarHeight
   const mainImg = "/img/fondo-pantalla2.jpg";
 
   return (
@@ -13,30 +16,31 @@ const InitialHomeSection = ({ navBarHeight }) => {
       sx={{
         position: "relative",
         width: "100vw",
-        minHeight: "100vh", // ¡Esto es clave!
+        minHeight: "calc(100vh - var(--navbar-height, 0px))",
+        marginTop: "calc(-1 * var(--navbar-height, 0px))",
+        paddingTop: "var(--navbar-height, 0px)",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
         color: "white",
         textAlign: "center",
-        overflow: "hidden",
+        zIndex: -1,
       }}
     >
-      {/* The background image - now correctly fixed to the viewport and filling it */}
       <Box
         component="img"
         src={mainImg}
         alt="Co.solar imagen principal"
         sx={{
-          position: "fixed", // Stays fixed relative to the viewport
+          position: "absolute",
           top: 0,
           left: 0,
-          width: "100vw", // <--- Make sure this is '100vw'
-          height: "100vh", // <--- Make sure this is '100vh'
+          width: "100vw",
+          height: "100vh",
           objectFit: "cover",
           objectPosition: "center",
-          zIndex: -1, // Stays behind everything
+          zIndex: -1,
         }}
       />
       <Typography
