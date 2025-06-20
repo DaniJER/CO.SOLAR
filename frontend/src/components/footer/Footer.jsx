@@ -173,7 +173,7 @@ const Footer = () => {
           </Typography>
 
           <Typography variant="body2" sx={{ color: "rgba(255,255,255,0.7)" }}>
-            📞 Contacto: +57 3XX XXX XXXX | 📧 administración@cosolar.com
+            📞 Contacto: +57 3052115364 | 📧 administración@cosolar.com
           </Typography>
         </Box>
         <br></br>

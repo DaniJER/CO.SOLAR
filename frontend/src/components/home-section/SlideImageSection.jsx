@@ -12,25 +12,42 @@ function SlideImageSection() {
   const images = [
     {
       src: "/img-installations/ADKR1239.png",
-      tittle: "ejemplo",
+      tittle: "Caucasia",
     },
     {
       src: "/img-installations/DYFP0641.PNG",
-      tittle: "ejemplo",
+      tittle: "Planeta Rica",
     },
     {
       src: "/img-installations/tltt8538.PNG",
-      tittle: "ejemplo",
+      tittle: "El Bagre",
     },
   ];
 
   return (
-    <>
-      <Typography sx={{ textAlign: "center", fontWeight: 100 }}>
+    <Box
+      sx={{
+        display: "block",
+        width: "100%",
+        height: "100%",
+        // backgroundColor: "rgba(65, 61, 61, 0.74)",
+        alignContent: "center",
+      }}
+    >
+      <Typography
+        variant="h1"
+        sx={{
+          color: "#000",
+          // fontStyle: "italic",
+          textAlign: "center",
+          // textShadow: "2px 2px 4px rgba(100, 93, 93, 0.7)",
+          fontSize: "2.5rem",
+        }}
+      >
         <br />
-        <br />
-        <h1>Más de tres mil personas beneficiadas con nuestros proyectos</h1>
+        Más de tres mil personas beneficiadas con nuestros proyectos
       </Typography>
+
       <Swiper
         spaceBetween={30}
         slidesPerView={1}
@@ -38,7 +55,7 @@ function SlideImageSection() {
         pagination={{ clickable: true }}
         modules={[Pagination, Navigation]}
         loop={true}
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        autoplay={{ delay: 2000, disableOnInteraction: false }}
         style={{
           width: "100%",
           maxWidth: "1200px",
@@ -67,7 +84,7 @@ function SlideImageSection() {
                   width: "100%",
                   height: "100%",
                   objectFit: "cover",
-                  filter: "brightness(90%)",
+                  filter: "brightness(95%)",
                 }}
               />
               <Box
@@ -80,18 +97,22 @@ function SlideImageSection() {
                   color: "white",
                 }}
               >
-                <Typography variant="h4" sx={{ mb: 1 }}>
+                <Typography
+                  variant="h3"
+                  sx={{
+                    color: "#ffffff",
+                    textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)",
+                    marginTop: "25rem",
+                  }}
+                >
                   {img.tittle}
                 </Typography>
-                <Button variant="contained" color="primary">
-                  Saber más
-                </Button>
               </Box>
             </Paper>
           </SwiperSlide>
         ))}
       </Swiper>
-    </>
+    </Box>
   );
 }
 

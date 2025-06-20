@@ -3,25 +3,40 @@ import { Box, Paper, Typography, Button } from "@mui/material";
 const TestimonialSection = (props) => {
   return (
     <>
-      <Typography
-        sx={{
-          textAlign: "center",
-        }}
-      >
-        <h1>Testimonios</h1>
-      </Typography>
       <br></br>
-      <Typography
+      <Box
         sx={{
-          width: { xs: "90%", sm: "35rem" },
           textAlign: "justify",
-          textAnchor: "initial",
+          margin: "0 auto",
+          width: {
+            xs: "100%",
+            sm: "100%",
+            md: "50%",
+          },
         }}
       >
-        <p>{props.text}</p>
-      </Typography>
+        <Typography
+          variant="p"
+          sx={{
+            margin: "1.8rem",
+            width: { xs: "90%", sm: "35rem" },
+            textAnchor: "initial",
+            fontSize: "1.5rem",
+          }}
+        >
+          "{props.text}".
+        </Typography>
+
+        <br></br>
+        <br></br>
+        <Typography
+          variant="p"
+          sx={{ fontWeight: "bold", fontSize: "1.5rem", textAlign: "left" }}
+        >
+          -{props.name}
+        </Typography>
+      </Box>
       <br></br>
-      <Typography sx={{ fontWeight: "bold" }}>-{props.name}</Typography>
     </>
   );
 };

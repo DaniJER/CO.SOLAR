@@ -32,14 +32,13 @@ const theme = createTheme({
   typography: {
     fontFamily: "kepler-std, roboto, Arial, sans-serif",
     h1: {
-      fontStyle: "normal",
-      fontFamily: "kepler-std",
-      fontSize: "1.5rem",
-      fontWeight: "normal",
+      fontSize: "2.5rem",
+      fontWeight: "bold",
+      fontFamily: "kepler-std, roboto, Arial, sans-serif",
     },
     p: {
       fontStyle: "normal",
-      fontSize: { xs: "0.9rem", sm: "1.1rem", md: "10rem" },
+      fontSize: { xs: "0.9rem", sm: "1.1rem", md: "20rem" },
     },
   },
   // ... otras variaciones de tipografía
