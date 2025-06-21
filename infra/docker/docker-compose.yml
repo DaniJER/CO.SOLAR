@@ -1,0 +1,26 @@
+services:
+  bd:
+    image: postgres:17
+    container_name: bd
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: bd
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./bd_data:/var/lib/postgresql/data
+      - ./backups:/backups
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@culo.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "5050:80"
+    depends_on:
+      - bd
+    # volumes:
+      # - ./pgadmin_data:/var/lib/pgadmin
+

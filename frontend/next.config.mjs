@@ -1,6 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: false, // Mejora la velocidad en desarrollo
+  output: "export", // Habilita la exportación estática
+  trailingSlash: true, // Opcional: añade slash al final de las URLs
+  images: {
+    unoptimized: true, // Necesario para exportación estática
+  },
 
   eslint: {
     ignoreDuringBuilds: true, // Evita que ESLint frene el build
