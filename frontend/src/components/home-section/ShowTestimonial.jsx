@@ -9,7 +9,7 @@ const ShowTestimonial = () => {
       <br />
       <br />
       <br />
-      <Typography variant="h1" sx={{ fontSize: "4.5", textAlign: "center" }}>
+      <Typography variant="h1" sx={{ textAlign: "center" }}>
         Testimonios de nuestros clientes
       </Typography>
       <br />

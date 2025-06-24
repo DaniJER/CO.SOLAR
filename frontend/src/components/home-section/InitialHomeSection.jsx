@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 
 const InitialHomeSection = () => {
-  const mainImg = "/img/prueba2.jpg";
+  const mainImg = "/img/mainBackground.jpg";
 
   return (
     <>

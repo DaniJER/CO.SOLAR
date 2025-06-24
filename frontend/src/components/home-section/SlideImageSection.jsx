@@ -11,7 +11,7 @@ import "swiper/css/navigation";
 function SlideImageSection() {
   const images = [
     {
-      src: "/img-installations/ADKR1239.png",
+      src: "/img-installations/BBPM2465.PNG",
       tittle: "Caucasia",
     },
     {
@@ -19,7 +19,7 @@ function SlideImageSection() {
       tittle: "Planeta Rica",
     },
     {
-      src: "/img-installations/tltt8538.PNG",
+      src: "/img-installations/INSN3911.PNG",
       tittle: "El Bagre",
     },
   ];
@@ -29,19 +29,21 @@ function SlideImageSection() {
       sx={{
         display: "block",
         width: "100%",
-        height: "100%",
-        // backgroundColor: "rgba(65, 61, 61, 0.74)",
+        height: "100vh",
         alignContent: "center",
+        /*bgcolor: "primary.dark",*/
       }}
     >
       <Typography
         variant="h1"
         sx={{
           color: "#000",
-          // fontStyle: "italic",
           textAlign: "center",
-          // textShadow: "2px 2px 4px rgba(100, 93, 93, 0.7)",
-          fontSize: "2.5rem",
+          fontSize: {
+            md: "2.5rem",
+            xs: "1.9rem",
+            sm: "1rem",
+          },
         }}
       >
         <br />
@@ -55,13 +57,12 @@ function SlideImageSection() {
         pagination={{ clickable: true }}
         modules={[Pagination, Navigation]}
         loop={true}
-        autoplay={{ delay: 2000, disableOnInteraction: false }}
+        autoplay={{ delay: 1000, disableOnInteraction: false }}
         style={{
           width: "100%",
           maxWidth: "1200px",
           height: "550px",
           margin: "35px auto",
-          padding: "35 auto",
         }}
       >
         {images.map((img, index) => (
@@ -73,7 +74,6 @@ function SlideImageSection() {
                 height: "100%",
                 position: "relative",
                 overflow: "hidden",
-                padding: "35 auto",
               }}
             >
               <Box

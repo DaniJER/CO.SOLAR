@@ -42,7 +42,6 @@ export function Providers({ children }) {
         <Box component="main" sx={{ flexGrow: 1 }}>
           {children}
         </Box>
-
         <Footer />
       </Box>
     </ThemeProvider>

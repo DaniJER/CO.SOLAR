@@ -6,10 +6,14 @@ const TestimonialSection = (props) => {
       <br></br>
       <Box
         sx={{
-          textAlign: "justify",
+          textAlign: {
+            xs: "justify",
+            sm: "center",
+            md: "justify",
+          },
           margin: "0 auto",
           width: {
-            xs: "100%",
+            xs: "95%",
             sm: "100%",
             md: "50%",
           },

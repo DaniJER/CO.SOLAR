@@ -20,7 +20,7 @@ const pages = [
   { name: "Cotizar", path: "/quote" },
   { name: "Servicios", path: "/services" },
   { name: "Testimonios", path: "/cases" },
-  { name: "Contacto", path: "/contact" },
+  { name: "Nosotros", path: "/aboutUs" },
 ];
 
 const NavBar = () => {
@@ -37,7 +37,7 @@ const NavBar = () => {
     setAnchorElNav(null);
   };
 
-  const logoPngPath = "/img/cosolar.png"; // ¡RUTA DE TU LOGO!
+  const logoPngPath = "/logos/logo-co.solar.png"; // ¡RUTA DE TU LOGO!
 
   return (
     <AppBar
