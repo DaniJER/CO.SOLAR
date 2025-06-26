@@ -36,13 +36,27 @@ const theme = createTheme({
       fontWeight: "bold",
       fontFamily: "kepler-std, roboto, Arial, sans-serif",
     },
+    h2: {
+      fontSize: { md: "2.5rem", xs: "1.7rem" },
+      fontWeight: "bold",
+      fontFamily: "kepler-std, roboto, Arial, sans-serif",
+    },
+    h3: {
+      fontSize: "2.5rem",
+      fontWeight: "bold",
+      fontFamily: "kepler-std, roboto, Arial, sans-serif",
+    },
+    h4: {
+      fontSize: "2.5rem",
+      fontWeight: "bold",
+      fontFamily: "kepler-std, roboto, Arial, sans-serif",
+    },
     p: {
+      fontFamily: "roboto",
       fontStyle: "normal",
-      fontSize: { xs: "0.9rem", sm: "1.1rem", md: "20rem" },
+      fontSize: { xs: "1.5rem", sm: "1.1rem", md: "1.3rem" },
     },
   },
-  // ... otras variaciones de tipografía
-  // components: { ... para sobrescribir estilos de componentes específicos }
 });
 
 export default theme;

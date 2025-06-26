@@ -54,7 +54,7 @@ const InitialHomeSection = () => {
             sm: { fontSize: "1.5rem" },
           }}
         >
-          Potencia tu futuro con Co.solar
+          Transforma tu hogar, multiplica tu ahorro.
         </Typography>
         <Typography
           variant="h1"

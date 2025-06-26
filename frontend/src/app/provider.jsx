@@ -6,7 +6,8 @@ import { ThemeProvider } from "@mui/material/styles";
 import theme from "@/themes/themes";
 import NavBar from "@/components/navbar/NavBar";
 import Footer from "@/components/footer/Footer";
-import { Box } from "@mui/material";
+import { Box, Toolbar } from "@mui/material";
+import Arrow from "@/components/arrow/Arrow";
 
 export function Providers({ children }) {
   const navBarRef = useRef(null); // Create a ref to attach to the NavBar container
@@ -26,24 +27,26 @@ export function Providers({ children }) {
   }, []); // The empty dependency array ensures this runs only once after initial render
 
   return (
-    <ThemeProvider theme={theme}>
-      <Box
-        sx={{
-          display: { sx: "flex", sm: "80", xs: "64" },
-          flexDirection: "column",
-          minHeight: "100dvh",
-          overflowX: "hidden",
-        }}
-      >
-        <nav ref={navBarRef}>
-          <NavBar />
-        </nav>
+    <>
+      <ThemeProvider theme={theme}>
+        <Box
+          sx={{
+            display: { sx: "flex", sm: "80", xs: "64" },
+            flexDirection: "column",
+            minHeight: "100dvh",
+            overflowX: "hidden",
+          }}
+        >
+          <nav ref={navBarRef}>
+            <NavBar />
+          </nav>
 
-        <Box component="main" sx={{ flexGrow: 1 }}>
-          {children}
+          <Box component="main" sx={{ flexGrow: 1 }}>
+            {children}
+          </Box>
+          <Footer />
         </Box>
-        <Footer />
-      </Box>
-    </ThemeProvider>
+      </ThemeProvider>
+    </>
   );
 }

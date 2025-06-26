@@ -132,13 +132,14 @@ const NavBar = () => {
                     width: "100%",
                   }}
                 >
-                  <Typography textAlign="center">{page.name}</Typography>
+                  <Typography textAlign="center">
+                    <b>{page.name}</b>
+                  </Typography>
                 </Link>
               </MenuItem>
             ))}
           </Menu>
 
-          {/* Logo a la derecha para móviles */}
           <Link
             href="/"
             passHref

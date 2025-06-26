@@ -7,13 +7,14 @@ const QuoteSection = () => {
       sx={{
         justifyItems: "center",
         alignContent: "center",
-        backgroundColor: "rgb(92, 91, 91)",
+        backgroundColor: "rgb(24, 23, 23)",
         width: "100%",
-        minHeight: "75vh",
+        minHeight: { xs: "75vh", md: "60vh" },
         marginBottom: "-4rem",
+        marginTop: { md: "-2.5rem", xs: "-3rem" },
       }}
     >
-      <Typography variant="h2" color="white" marginBottom="3rem">
+      <Typography variant="h1" color="white" marginBottom="3rem">
         Contactanos <br />
       </Typography>
       <Typography
@@ -25,7 +26,7 @@ const QuoteSection = () => {
         }}
       >
         Nuestras asesorias, visitas y cotizaciones son totalmente gratuitas.
-        animate y vuelvete un caso más de exito con <b>CO.SOLAR.</b> <br />
+        Animate y vuelvete un caso más de exito con <b>CO.SOLAR.</b> <br />
         <br />
       </Typography>
       <Button

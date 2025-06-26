@@ -1,46 +1,47 @@
 import React from "react";
 import { Box, Paper, Typography, Button } from "@mui/material";
+import { Block } from "@mui/icons-material";
+
 const TestimonialSection = (props) => {
+  const videoUrl = props.videoUrl;
+  const preloadImage = props.poster;
   return (
     <>
-      <br></br>
       <Box
         sx={{
-          textAlign: {
-            xs: "justify",
-            sm: "center",
-            md: "justify",
-          },
-          margin: "0 auto",
-          width: {
-            xs: "95%",
-            sm: "100%",
-            md: "50%",
-          },
+          display: "flex", // Habilita Flexbox
+          flexDirection: "column", // Apila el video y el texto verticalmente
+          alignItems: "center", // Centra el video y el texto horizontalmente dentro de este Box          // Limita el ancho máximo del contenedor del video y texto
+          marginTop: { md: "4rem", xs: "-3rem" },
+          margin: { md: "0 auto" },
+          paddingTop: { xs: "4rem" },
         }}
       >
-        <Typography
-          variant="p"
-          sx={{
-            margin: "1.8rem",
-            width: { xs: "90%", sm: "35rem" },
-            textAnchor: "initial",
-            fontSize: "1.5rem",
+        <video
+          controls
+          muted
+          loop
+          playsInline
+          poster={preloadImage}
+          style={{
+            display: { md: "block" },
+            flexDirection: { md: "column" },
+            maxHeight: "400px",
+            borderRadius: "8px",
           }}
         >
-          "{props.text}".
-        </Typography>
-
-        <br></br>
-        <br></br>
+          <source src={videoUrl} type="video/mp4" />
+        </video>
         <Typography
-          variant="p"
-          sx={{ fontWeight: "bold", fontSize: "1.5rem", textAlign: "left" }}
+          variant="h5"
+          sx={{
+            marginTop: { xs: "1rem" },
+            color: "#FFF",
+          }}
         >
-          -{props.name}
+          <b>{props.videoTitle}</b>
         </Typography>
       </Box>
-      <br></br>
     </>
   );
 };

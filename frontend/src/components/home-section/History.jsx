@@ -1,55 +1,65 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
+import { LaptopChromebook } from "@mui/icons-material";
 
 const History = () => {
   return (
     <>
       <Box
         sx={{
+          alignItems: { md: "center", xs: "justify" },
           display: { md: "flex", xs: "block" },
-          gap: { md: "9rem" },
+          gap: { md: "10rem" },
           width: "100%",
-          height: "100vh",
-          /*bgcolor: "fourth.dark",*/
+          height: { md: "60vh", xs: "155vh", sm: "105vh" },
           color: "#000",
-          textAlign: { md: "justify", xs: "justify" },
-          alignItems: { md: "center" },
-          justifyItems: { md: "center" },
-          alignContent: { md: "center" },
+          justifyContent: { xs: "center", md: "space-around" },
+          marginTop: { md: "-.99rem", sm: "-.01rem", xs: "1rem" },
+          marginBottom: { xs: "1rem" },
+          paddingTop: { xs: "5vh", md: "1rem" },
         }}
       >
         <Typography
-          variant="h1"
-          sx={{
-            marginLeft: { md: "2rem" },
-            paddingTop: { xs: "3rem" },
-            width: {
-              md: "40%",
-              xs: "100%",
-              sm: "100",
-            },
-          }}
-        >
-          Impulsando un Futuro Radiante, Panel a Panel
-        </Typography>
-        <Typography
           variant="h5"
           sx={{
-            width: {
-              md: "60%",
-              xs: "100%",
-              sm: "100",
+            color: "#000",
+            fontSize: {
+              md: "2.5rem",
+              xs: "2.5rem",
+              sm: "3rem",
             },
-            height: { xs: "40vh" },
-            marginRight: "3rem",
-            justifyItems: { md: "center" },
-            alignContent: { md: "center" },
-            paddingTop: { xs: "4rem" },
+            width: { xs: "90%", md: "50%", sm: "90%" },
+            marginLeft: { md: "2rem", xs: "auto" },
+            marginRight: { xs: "auto" },
+            textAlign: { xs: "center", md: "left" },
           }}
         >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
-          laudantium repellendus quia id earum animi ullam numquam, eius non
-          voluptatem voluptatibus eveniet
+          Tu Casa, tu energía: El sol a tu servicio.
+        </Typography>
+        <Typography
+          sx={{
+            marginTop: { xs: "2rem", md: 0 },
+            textAlign: { xs: "justify", md: "justify" },
+            marginRight: { md: "2rem", xs: "auto" },
+            marginLeft: { xs: "auto" },
+            width: {
+              md: "60%",
+              xs: "75%",
+              sm: "85%",
+            },
+            fontSize: { xs: "1.6rem", md: "1.1rem", sm: "1.7rem" },
+          }}
+        >
+          Desde nuestro inicio en 2023, nos hemos consolidado como líderes en
+          soluciones de energía solar, transformando la vida de miles de
+          hogares, negocios y empresas. Hemos experimentado un crecimiento
+          exponencial gracias a nuestro compromiso con la innovación y la
+          eficiencia, ofreciendo sistemas de paneles solares que garantizan
+          ahorros significativos y un futuro más sostenible. En los últimos dos
+          años, hemos llevado energía limpia y renovable a diversos municipios
+          del bajo Cauca Antioqueño, y ahora a la costa Pacifica y Caribe,
+          impulsando la independencia energética y contribuyendo activamente a
+          un planeta más verde.
         </Typography>
       </Box>
     </>
