@@ -63,7 +63,7 @@ const Footer = () => {
             <Stack direction="column" spacing={1}>
               {/* Los Link ya tenían 'color="inherit"' que funciona con el 'color: "white"' del Box padre */}
               <Link
-                href="/"
+                href="#/"
                 color="inherit"
                 underline="hover"
                 sx={{ color: "white" }}
@@ -71,7 +71,7 @@ const Footer = () => {
                 Inicio
               </Link>
               <Link
-                href="/services"
+                href="/#installations"
                 color="inherit"
                 underline="hover"
                 sx={{ color: "white" }}
@@ -79,29 +79,29 @@ const Footer = () => {
                 Servicios
               </Link>
               <Link
-                href="/about"
+                href="/#aboutUs"
                 color="inherit"
                 underline="hover"
                 sx={{ color: "white" }}
               >
                 Nosotros
               </Link>
-              <Link
+              {/* <Link
                 href="/contact"
                 color="inherit"
                 underline="hover"
                 sx={{ color: "white" }}
               >
                 Contacto
-              </Link>
-              <Link
+              </Link> */}
+              {/* <Link
                 href="/quote"
                 color="inherit"
                 underline="hover"
                 sx={{ color: "white" }}
               >
                 Cotiza Aquí
-              </Link>
+              </Link> */}
             </Stack>
           </Box>
 
@@ -117,7 +117,7 @@ const Footer = () => {
             >
               <IconButton
                 aria-label="Facebook"
-                color="inherit" // 'inherit' tomará el 'white' del padre
+                color="inherit"
                 href="https://facebook.com/Cosolar"
                 target="_blank"
                 rel="noopener"
@@ -128,7 +128,7 @@ const Footer = () => {
               <IconButton
                 aria-label="Twitter"
                 color="inherit"
-                href="https://twitter.com/tumarca"
+                href="/"
                 target="_blank"
                 rel="noopener"
                 sx={{ "&:hover": { color: "primary.light" } }}
@@ -148,7 +148,7 @@ const Footer = () => {
               <IconButton
                 aria-label="LinkedIn"
                 color="inherit"
-                href="https://linkedin.com/company/tumarca"
+                href="/"
                 target="_blank"
                 rel="noopener"
                 sx={{ "&:hover": { color: "primary.light" } }}

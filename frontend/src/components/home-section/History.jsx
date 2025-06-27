@@ -1,11 +1,11 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import { LaptopChromebook } from "@mui/icons-material";
 
 const History = () => {
   return (
     <>
       <Box
+        id="aboutUs"
         sx={{
           alignItems: { md: "center", xs: "justify" },
           display: { md: "flex", xs: "block" },
@@ -15,8 +15,8 @@ const History = () => {
           color: "#000",
           justifyContent: { xs: "center", md: "space-around" },
           marginTop: { md: "-.99rem", sm: "-.01rem", xs: "1rem" },
-          marginBottom: { xs: "1rem" },
-          paddingTop: { xs: "5vh", md: "1rem" },
+          marginBottom: { xs: "8rem", sm: "-8rem", md: "3rem" },
+          paddingTop: { xs: "5vh", md: "1rem", sm: "4vh" },
         }}
       >
         <Typography

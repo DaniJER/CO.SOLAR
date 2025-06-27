@@ -11,20 +11,24 @@ import "swiper/css/navigation";
 function SlideImageSection() {
   const images = [
     {
+      src: "https://res.cloudinary.com/diwwjzmsh/image/upload/v1750862953/CMOM7578-min_sx9wf3.png",
+      tittle: "Caucasia, Antioquia",
+    },
+    {
+      src: "https://res.cloudinary.com/diwwjzmsh/image/upload/v1751032779/SWNW3662_bctkhj.png",
+      tittle: "Jardín Caceres, Antioquia",
+    },
+    {
       src: "https://res.cloudinary.com/diwwjzmsh/image/upload/v1750862954/FULU3431-min_u1tt18.jpg",
       tittle: "Caucasia, Antioquia",
     },
     {
-      src: "https://res.cloudinary.com/diwwjzmsh/image/upload/v1750862954/INSN3911-min_za9yyq.png",
-      tittle: "Jardín Caceres, Antioquia",
+      src: "https://res.cloudinary.com/diwwjzmsh/image/upload/v1750862952/EJPN5999-min_xsmleb.png",
+      tittle: "Caucasia, Antioquia",
     },
     {
-      src: "https://res.cloudinary.com/diwwjzmsh/image/upload/v1750862953/CMOM7578-min_sx9wf3.png",
-      tittle: "Jardín Caceres, Antioquia",
-    },
-    {
-      src: "https://res.cloudinary.com/diwwjzmsh/image/upload/v1750862953/BBPM2465-min_dmbgan.png",
-      tittle: "Jardín Caceres, Antioquia",
+      src: "https://res.cloudinary.com/diwwjzmsh/image/upload/v1750862952/EWJE9099-min_ddmbxo.png",
+      tittle: "Caucasia, Antioquia",
     },
   ];
 
@@ -32,6 +36,7 @@ function SlideImageSection() {
     <>
       <br></br>
       <Box
+        id="installations"
         sx={{
           display: "block",
           width: "100vw",

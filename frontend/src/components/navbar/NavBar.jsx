@@ -14,13 +14,15 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 import MenuIcon from "@mui/icons-material/Menu";
 import Link from "next/link";
+import TestimonialSection from "../home-section/TestimonialSection";
 
 const pages = [
   { name: "Inicio", path: "/" },
-  { name: "Cotizar", path: "/quote" },
-  { name: "Servicios", path: "/services" },
-  { name: "Testimonios", path: "/cases" },
-  { name: "Nosotros", path: "/aboutUs" },
+  // { name: "Cotizar", path: "/quote" },
+  // { name: "Servicios", path: "/services" },
+  { name: "Testimonios", path: "/#testimonial" },
+  { name: "Nosotros", path: "/#aboutUs" },
+  { name: "Instalaciones", path: "/#installations" },
 ];
 
 const NavBar = () => {

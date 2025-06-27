@@ -9,6 +9,7 @@ const InitialHomeSection = () => {
   return (
     <>
       <Box
+        id="/"
         sx={{
           position: "cover",
           width: "100vw",
@@ -68,22 +69,27 @@ const InitialHomeSection = () => {
         >
           Soluciones energéticas, limpias y eficientes
         </Typography>
-        <Button
-          variant="contained"
-          size="large"
-          sx={{
-            color: "#fff",
-            textShadow: "1px 1px 3px rgba(26, 26, 26, 0.7)",
-            cursor: "pointer",
-            zIndex: 1,
-            backgroundColor: "fourth.main",
-            "&:hover": {
-              backgroundColor: "fourth.dark",
-            },
-          }}
+        <a
+          href="https://wa.me/573152115364?text=Hola,%20vengo%20de%20la%20app%20y%20quisiera%20más%20información%20de%20los%20paneles%20solares."
+          target="_blank"
         >
-          ¡Cotiza Ahora!
-        </Button>
+          <Button
+            variant="contained"
+            size="large"
+            sx={{
+              color: "#fff",
+              textShadow: "1px 1px 3px rgba(26, 26, 26, 0.7)",
+              cursor: "pointer",
+              zIndex: 1,
+              backgroundColor: "fourth.main",
+              "&:hover": {
+                backgroundColor: "fourth.dark",
+              },
+            }}
+          >
+            ¡Cotiza Ahora!
+          </Button>
+        </a>
       </Box>
     </>
   );

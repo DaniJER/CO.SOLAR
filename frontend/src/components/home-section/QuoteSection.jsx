@@ -29,21 +29,26 @@ const QuoteSection = () => {
         Animate y vuelvete un caso más de exito con <b>CO.SOLAR.</b> <br />
         <br />
       </Typography>
-      <Button
-        size="large"
-        sx={{
-          color: "#fff",
-          textShadow: "1px 1px 3px rgba(26, 26, 26, 0.7)",
-          cursor: "pointer",
-          zIndex: 1,
-          backgroundColor: "fourth.main",
-          "&:hover": {
-            backgroundColor: "fourth.dark",
-          },
-        }}
+      <a
+        href="https://wa.me/573015080461?text=Hola,%20vengo%20de%20la%20app%20y%20quisiera%20más%20información%20de%20los%20paneles%20solares."
+        target="_blank"
       >
-        ¡Cotiza Ahora!
-      </Button>
+        <Button
+          size="large"
+          sx={{
+            color: "#fff",
+            textShadow: "1px 1px 3px rgba(26, 26, 26, 0.7)",
+            cursor: "pointer",
+            zIndex: 1,
+            backgroundColor: "fourth.main",
+            "&:hover": {
+              backgroundColor: "fourth.dark",
+            },
+          }}
+        >
+          ¡Cotiza Ahora!
+        </Button>
+      </a>
     </Box>
   );
 };
