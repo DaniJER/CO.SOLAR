@@ -40,11 +40,11 @@ const Footer = () => {
           {/* Sección de Logo/Marca y Derechos de Autor */}
           <Box sx={{ textAlign: { xs: "center", md: "left" } }}>
             <Typography variant="h6" gutterBottom>
-              CoSolar
+              CO.SOLAR
             </Typography>
 
             <Typography variant="body2" sx={{ color: "rgba(255,255,255,0.7)" }}>
-              © {new Date().getFullYear()} CoSolar. Todos los derechos
+              © {new Date().getFullYear()} CO.SOLAR. Todos los derechos
               reservados.
             </Typography>
             <Typography
