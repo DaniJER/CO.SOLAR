@@ -7,6 +7,7 @@ const QuoteSection = () => {
       sx={{
         justifyItems: "center",
         alignContent: "center",
+        textAlign: "center",
         backgroundColor: "rgb(24, 23, 23)",
         width: "100%",
         minHeight: { xs: "75vh", md: "60vh" },
