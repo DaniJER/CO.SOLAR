@@ -15,12 +15,11 @@ services:
     image: dpage/pgadmin4
     container_name: pgadmin
     environment:
-      PGADMIN_DEFAULT_EMAIL: admin@culo.com
+      PGADMIN_DEFAULT_EMAIL: admin@danieldev.com
       PGADMIN_DEFAULT_PASSWORD: admin
     ports:
       - "5050:80"
-    depends_on:
-      - bd
+    # depends_on:
+    #   - bd
     # volumes:
-      # - ./pgadmin_data:/var/lib/pgadmin
-
+    # - ./pgadmin_data:/var/lib/pgadmin

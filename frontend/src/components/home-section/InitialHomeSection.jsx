@@ -28,7 +28,7 @@ const InitialHomeSection = () => {
         <Box
           component="img"
           src={mainImg}
-          alt="Co.solar imagen principal"
+          alt="CO.SOLAR imagen principal"
           sx={{
             position: "absolute",
             top: 0,
@@ -70,7 +70,7 @@ const InitialHomeSection = () => {
           Soluciones energéticas, limpias y eficientes
         </Typography>
         <a
-          href="https://wa.me/573152115364?text=Hola,%20vengo%20de%20la%20app%20y%20quisiera%20más%20información%20de%20los%20paneles%20solares."
+          href="https://wa.me/573015080461?text=Hola,%20vengo%20de%20la%20app%20y%20quisiera%20más%20información%20de%20los%20paneles%20solares."
           target="_blank"
         >
           <Button

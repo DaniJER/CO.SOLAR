@@ -2,6 +2,7 @@
 import "@/components/forms/FormQuote";
 import Typography from "@mui/material/Typography";
 import Form from "@/components/forms/FormQuote";
+import { Box } from "@mui/material";
 
 const Quote = () => {
   return (

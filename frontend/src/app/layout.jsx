@@ -11,11 +11,11 @@ export const metadata = {
   metadataBase: new URL("https://www.cosolar.com"), // <<== ¡IMPORTANTE! Reemplaza con tu dominio real
 
   title: {
-    default: "CoSolar | Soluciones de Energía Solar en Colombia",
+    default: "CO.SOLAR | Soluciones de Energía Solar en Colombia",
     template: "%s | CoSolar",
   },
   description:
-    "CoSolar ofrece soluciones integrales de energía solar para hogares y empresas en Colombia, incluyendo Antioquia, Medellín y Cali. Reduce tus costos de energía con paneles solares de alta eficiencia.",
+    "CO.SOLAR ofrece soluciones integrales de energía solar para hogares y empresas en Colombia, incluyendo Antioquia, Medellín y Cali. Reduce tus costos de energía con paneles solares de alta eficiencia.",
 
   keywords: [
     "energía solar",
@@ -33,9 +33,9 @@ export const metadata = {
     "Cali",
     "energía limpia",
   ],
-  authors: [{ name: "CoSolar", url: "https://www.cosolar.com" }],
+  authors: [{ name: "CO.SOLAR", url: "https://www.cosolar.com" }],
   creator: "Equipo de Desarrollo Co.Solar",
-  publisher: "Co.Solar S.A.S.",
+  publisher: "CO.SOLAR S.A.S.",
 
   robots: {
     index: true,
@@ -56,11 +56,10 @@ export const metadata = {
   },
 
   openGraph: {
-    title: "CoSolar | Invierte en Energía Solar para Tu Futuro",
-    description:
-      "Líderes en soluciones de energía solar en Colombia. Paneles solares de alta calidad y servicio experto para hogares y empresas. ¡Cotiza gratis!",
+    title: "COSOLAR | Invierte en Energía Solar para Tu Futuro",
+    description: "Líderes en soluciones de energía solar en Colombia.",
     url: "https://www.cosolar.com.co", // <<== ¡IMPORTANTE! Reemplaza
-    siteName: "Co.Solar",
+    siteName: "CO.SOLAR",
     locale: "es_CO",
     type: "website",
   },

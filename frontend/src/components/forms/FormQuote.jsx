@@ -105,6 +105,7 @@ const Form = () => {
           border: "1px solid #ccc",
           borderRadius: 1,
           boxShadow: 1,
+          zIndex: 1,
         }}
       >
         <Typography variant="h6" component="h4" gutterBottom>
@@ -252,7 +253,9 @@ const Form = () => {
         boxShadow: 3,
       }}
     >
-      <h1>Ingresa tus datos para realizar la consulta</h1>
+      <Typography variant="h2">
+        Ingresa tus datos para realizar la consulta
+      </Typography>
       <form>
         <TextField
           fullWidth

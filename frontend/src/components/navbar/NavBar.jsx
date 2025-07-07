@@ -18,11 +18,12 @@ import TestimonialSection from "../home-section/TestimonialSection";
 
 const pages = [
   { name: "Inicio", path: "/" },
-  // { name: "Cotizar", path: "/quote" },
+  { name: "Cotizar", path: "/quote" },
   // { name: "Servicios", path: "/services" },
   { name: "Testimonios", path: "/#testimonial" },
   { name: "Nosotros", path: "/#aboutUs" },
   { name: "Instalaciones", path: "/#installations" },
+  { name: "Iniciar sesión", path: "/login" },
 ];
 
 const NavBar = () => {
@@ -170,11 +171,7 @@ const NavBar = () => {
             />
           </Link>
           {/*
-            El Typography "CoSolar" para móviles estaba en un Box con display: { xs: "block", sm: "none" }
-            Si quieres que el texto "CoSolar" aparezca junto al logo en móviles, necesitas
-            moverlo dentro del mismo Link con el Box del logo.
-            Si no lo necesitas, simplemente no lo incluyas en esta sección del Link.
-            Lo he quitado para simplificar el centrado del logo.
+          
           */}
         </Box>
 

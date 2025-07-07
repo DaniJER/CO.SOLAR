@@ -7,7 +7,6 @@ import theme from "@/themes/themes";
 import NavBar from "@/components/navbar/NavBar";
 import Footer from "@/components/footer/Footer";
 import { Box, Toolbar } from "@mui/material";
-import Arrow from "@/components/arrow/Arrow";
 
 export function Providers({ children }) {
   const navBarRef = useRef(null); // Create a ref to attach to the NavBar container
