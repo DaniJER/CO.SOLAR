@@ -3,7 +3,7 @@ const db = require("../db"); //requerimos el modulo de db
 //ejecutamos la función la cual hara la query para buscar al usuario por email
 const findUserWithEmail = async (email) => {
   try {
-    const result = await db.query("select * from users where email = $1", [
+    const result = await db.query("select * from persons where email = $1", [
       email,
     ]);
     return result.rows[0];

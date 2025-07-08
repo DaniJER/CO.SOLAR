@@ -3,6 +3,7 @@ const jwt = require("jsonwebtoken");
 const personModel = require("../models/personModel");
 
 const login = async (req, res) => {
+  console.log("BODY;", req.body);
   const { email, password } = req.body;
 
   try {
@@ -12,7 +13,7 @@ const login = async (req, res) => {
 
     const matches = await bcrypt.compare(password, person.password);
     if (!matches)
-      return res.status(404).json({ mensaje: "Contraseña incorrecta" });
+      return res.status(401).json({ mensaje: "Contraseña incorrecta" });
 
     //¿customer or employee?
 
@@ -32,7 +33,7 @@ const login = async (req, res) => {
       expiresIn: "2h",
     });
 
-    res.json({ token, rol });
+    res.json({ token, role });
   } catch (error) {
     console.error(error);
     res.status(500).json({ mensaje: "Error en el servidor" });
