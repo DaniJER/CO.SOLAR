@@ -84,10 +84,7 @@ const NavBar = () => {
             />
           </Link>
         </Box>
-        {/* --- Spacer para empujar los botones a la derecha en pantallas grandes --- */}
         <Box sx={{ flexGrow: 1, display: { xs: "none", sm: "flex" } }} />
-
-        {/* --- Menú de hamburguesa y Logo para pantallas PEQUEÑAS (xs) --- */}
         <Box
           sx={{
             flexGrow: 1,
@@ -96,7 +93,6 @@ const NavBar = () => {
             justifyContent: "space-between", // <- Mantiene el menú a la izquierda y el logo a la derecha
           }}
         >
-          {/* Menú hamburguesa a la izquierda */}
           <IconButton
             size="large"
             aria-label="open navigation menu"
@@ -161,12 +157,11 @@ const NavBar = () => {
               src={logoPngPath}
               alt="Co.Solar Logo"
               sx={{
-                maxHeight: "100%", // La imagen no será más alta que el Link
-                maxWidth: "100%", // La imagen no será más ancha que el Link
+                maxHeight: "100%",
+                maxWidth: "100%",
                 height: "auto",
                 width: "auto",
                 objectFit: "contain",
-                // display: { xs: "block", sm: "none" }, // Esto lo maneja el Link padre
               }}
             />
           </Link>

@@ -3,7 +3,6 @@ const jwt = require("jsonwebtoken");
 const personModel = require("../models/personModel");
 
 const login = async (req, res) => {
-  console.log("BODY;", req.body);
   const { email, password } = req.body;
 
   try {
@@ -15,21 +14,14 @@ const login = async (req, res) => {
     if (!matches)
       return res.status(401).json({ mensaje: "Contraseña incorrecta" });
 
-    //¿customer or employee?
+    const { id, role } = person;
+    console.log("ROL DESDE DB:", role);
 
-    let role = null;
-
-    if (await personModel.isEmployee(person.id)) {
-      role = "Empleado";
-    } else if (await personModel.isCustomer(person.id)) {
-      role = "Cliente";
-    } else {
-      return res
-        .status(403)
-        .json({ mensaje: "la persona no tiene un rol valido" });
+    if (!["customer", "office_employee", "tech_employee"].includes(role)) {
+      return res.status(403).json({ mensaje: "Rol inválido" });
     }
 
-    const token = jwt.sign({ id: person.id, role }, "secret", {
+    const token = jwt.sign({ id, role }, "secret", {
       expiresIn: "2h",
     });
 

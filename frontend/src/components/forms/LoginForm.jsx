@@ -33,10 +33,21 @@ const LoginForm = () => {
       localStorage.setItem("role", role);
 
       // Redirigir según rol
-      if (role === "Empleado") {
-        router.push("/dashboard/empleado");
-      } else if (role === "Cliente") {
-        router.push("/dashboard/cliente");
+      if (role === "office_employee") {
+        alert("Ingresaste como empleado de oficina");
+        router.push("/");
+      } else if (role === "customer") {
+        alert("Ingresaste como cliente");
+        router.push("/");
+      } else if (role === "tech_employee") {
+        alert("Ingresaste como tecnico");
+        router.push("/");
+      } else if (role === "super_admin") {
+        alert("Ingresaste como super administrador");
+        router.push("/");
+      } else if (role === "tech_leader") {
+        alert("Ingresaste como lider técnico");
+        router.push("/");
       } else {
         console.warn("Rol desconocido:", role);
       }

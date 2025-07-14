@@ -46,3 +46,7 @@ Modelos/
 
 #notes
 notes.txt/
+
+#hash
+backend/hash.js
+
