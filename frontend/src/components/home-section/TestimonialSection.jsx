@@ -13,7 +13,7 @@ const TestimonialSection = (props) => {
           display: "flex",
           marginRight: { md: "3.5rem", xs: "4rem" },
           flexWrap: "wrap",
-          // flexDirection: "column",
+          flexDirection: "column",
           // marginTop: { md: "4rem", xs: "-3rem" },
           // paddingTop: { xs: "4rem" },
           // width: "100%",
@@ -26,12 +26,10 @@ const TestimonialSection = (props) => {
           playsInline
           poster={preloadImage}
           style={{
-            display: { md: "column" },
-            flexDirection: { md: "column" },
-            minHeight: { md: "auto", xs: "auto" },
             borderRadius: "8px",
-            // justifyItems: "center",
-            // justifyContent: "center",
+            width: "100%", // o un tamaño fijo como "300px"
+            maxWidth: "300px", // evita que crezca más allá
+            height: "auto",
           }}
         >
           <source src={videoUrl} type="video/mp4" />
