@@ -146,7 +146,7 @@ const Footer = () => {
                 <InstagramIcon />
               </IconButton>
               <IconButton
-                aria-label="LinkedIn"
+                aria-label="LinkedIn￼"
                 color="inherit"
                 href="/"
                 target="_blank"

@@ -7,18 +7,16 @@ const ShowTestimonial = (props) => {
     <>
       <Box
         sx={{
+          flexWrap: "wrap",
+          textAlign: { xs: "center" },
           bgcolor: "primary.dark",
-          height: { xs: "190vh", md: "115vh" },
-          justifyItems: { xs: "center", md: "center" },
-          alignContent: { md: "center" },
-          alignItems: { md: "center" },
+          minHeight: { md: "100vh" }, // ✅ altura mínima
           marginTop: { md: "-12rem" },
         }}
       >
         <Typography
           variant="h1"
           sx={{
-            textAlign: "center",
             marginTop: { md: "3rem", xs: "-5rem" },
             paddingTop: { md: "2rem", xs: "7rem" },
             color: "#FFF",
@@ -28,16 +26,15 @@ const ShowTestimonial = (props) => {
         </Typography>
         <Box
           sx={{
-            marginTop: { md: "2rem" },
-            alignContent: { md: "flex-start" },
-            display: { md: "flex", xs: "block" },
-            flexWrap: "wrap",
-            alignItems: { md: "center" },
-            margin: "auto",
-            gap: { md: "8rem" },
+            display: "flex",
+            flexWrap: "wrap", // ✅ permite que se acomoden en filas
+            justifyContent: { md: "center", xs: "center" }, // ✅ centra horizontalmente
+            gap: { md: "3.5rem", xs: "2.5rem" }, // ✅ separación entre videos
             width: "100%",
-            height: { md: "125vh", xs: "80vh" },
-            paddingTop: { xs: "4rem" },
+            padding: { md: "2rem", xs: "2rem" },
+            paddingBottom: { md: "5rem", xs: "5rem" },
+            bgcolor: "primary.dark",
+            margin: { xs: " auto", md: "0 auto" },
           }}
         >
           <TestimonialSection
@@ -49,6 +46,51 @@ const ShowTestimonial = (props) => {
             videoUrl="https://res.cloudinary.com/diwwjzmsh/video/upload/v1750863568/GIRALSALUD_IPS_muiuld.mp4"
             videoTitle="GiraldSalud"
             poster="https://res.cloudinary.com/diwwjzmsh/image/upload/v1750976061/health-portrait_qa1exj.png"
+          />
+          <TestimonialSection
+            videoUrl="https://res.cloudinary.com/diwwjzmsh/video/upload/v1750863561/CO.SOLAR_CASA_DETRAS_DEL_EXITO_feo4vp.mp4"
+            videoTitle="Familia en Caucasia"
+            poster="https://res.cloudinary.com/diwwjzmsh/image/upload/v1750976061/portrait-family_cfjvt1.png"
+          />
+          <TestimonialSection
+            videoUrl="https://res.cloudinary.com/diwwjzmsh/video/upload/v1750863561/CO.SOLAR_CASA_DETRAS_DEL_EXITO_feo4vp.mp4"
+            videoTitle="Familia en Caucasia"
+            poster="https://res.cloudinary.com/diwwjzmsh/image/upload/v1750976061/portrait-family_cfjvt1.png"
+          />
+          <TestimonialSection
+            videoUrl="https://res.cloudinary.com/diwwjzmsh/video/upload/v1750863561/CO.SOLAR_CASA_DETRAS_DEL_EXITO_feo4vp.mp4"
+            videoTitle="Familia en Caucasia"
+            poster="https://res.cloudinary.com/diwwjzmsh/image/upload/v1750976061/portrait-family_cfjvt1.png"
+          />
+          <TestimonialSection
+            videoUrl="https://res.cloudinary.com/diwwjzmsh/video/upload/v1750863561/CO.SOLAR_CASA_DETRAS_DEL_EXITO_feo4vp.mp4"
+            videoTitle="Familia en Caucasia"
+            poster="https://res.cloudinary.com/diwwjzmsh/image/upload/v1750976061/portrait-family_cfjvt1.png"
+          />
+          <TestimonialSection
+            videoUrl="https://res.cloudinary.com/diwwjzmsh/video/upload/v1750863561/CO.SOLAR_CASA_DETRAS_DEL_EXITO_feo4vp.mp4"
+            videoTitle="Familia en Caucasia"
+            poster="https://res.cloudinary.com/diwwjzmsh/image/upload/v1750976061/portrait-family_cfjvt1.png"
+          />
+          <TestimonialSection
+            videoUrl="https://res.cloudinary.com/diwwjzmsh/video/upload/v1750863561/CO.SOLAR_CASA_DETRAS_DEL_EXITO_feo4vp.mp4"
+            videoTitle="Familia en Caucasia"
+            poster="https://res.cloudinary.com/diwwjzmsh/image/upload/v1750976061/portrait-family_cfjvt1.png"
+          />
+          <TestimonialSection
+            videoUrl="https://res.cloudinary.com/diwwjzmsh/video/upload/v1750863561/CO.SOLAR_CASA_DETRAS_DEL_EXITO_feo4vp.mp4"
+            videoTitle="Familia en Caucasia"
+            poster="https://res.cloudinary.com/diwwjzmsh/image/upload/v1750976061/portrait-family_cfjvt1.png"
+          />
+          <TestimonialSection
+            videoUrl="https://res.cloudinary.com/diwwjzmsh/video/upload/v1750863561/CO.SOLAR_CASA_DETRAS_DEL_EXITO_feo4vp.mp4"
+            videoTitle="Familia en Caucasia"
+            poster="https://res.cloudinary.com/diwwjzmsh/image/upload/v1750976061/portrait-family_cfjvt1.png"
+          />
+          <TestimonialSection
+            videoUrl="https://res.cloudinary.com/diwwjzmsh/video/upload/v1750863561/CO.SOLAR_CASA_DETRAS_DEL_EXITO_feo4vp.mp4"
+            videoTitle="Familia en Caucasia"
+            poster="https://res.cloudinary.com/diwwjzmsh/image/upload/v1750976061/portrait-family_cfjvt1.png"
           />
           <TestimonialSection
             videoUrl="https://res.cloudinary.com/diwwjzmsh/video/upload/v1750863561/CO.SOLAR_CASA_DETRAS_DEL_EXITO_feo4vp.mp4"

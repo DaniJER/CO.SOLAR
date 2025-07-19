@@ -31,7 +31,7 @@ const QuoteSection = () => {
         <br />
       </Typography>
       <a
-        href="https://wa.me/573241621864?text=Hola,%20vengo%20de%20la%20app%20y%20quisiera%20más%20información%20de%20los%20paneles%20solares."
+        href="https://wa.me/573241621864?text=Hola,%20vengo%20de%20la%20app%20y%20quisiera%20más%20información%20de%20sus%20servicios."
         target="_blank"
       >
         <Button

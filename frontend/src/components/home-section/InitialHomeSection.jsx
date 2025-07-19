@@ -38,7 +38,7 @@ const InitialHomeSection = () => {
             objectFit: "cover",
             objectPosition: "center",
             zIndex: -1,
-            opacity: "0.9", //Opacidad para la imagen inicial
+            opacity: "0.9",
           }}
         />
 
@@ -70,7 +70,7 @@ const InitialHomeSection = () => {
           Soluciones energéticas, limpias y eficientes
         </Typography>
         <a
-          href="https://wa.me/573015080461?text=Hola,%20vengo%20de%20la%20app%20y%20quisiera%20más%20información%20de%20los%20paneles%20solares."
+          href="https://wa.me/573015080461?text=Hola,%20vengo%20de%20la%20app%20y%20quisiera%20más%20información%20de%20sus%20servicios."
           target="_blank"
         >
           <Button

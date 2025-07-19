@@ -10,12 +10,13 @@ const TestimonialSection = (props) => {
       <Box
         id="testimonial"
         sx={{
-          display: "flex", // Habilita Flexbox
-          flexDirection: "column", // Apila el video y el texto verticalmente
-          alignItems: "center", // Centra el video y el texto horizontalmente dentro de este Box          // Limita el ancho máximo del contenedor del video y texto
-          marginTop: { md: "4rem", xs: "-3rem" },
-          margin: { md: "0 auto" },
-          paddingTop: { xs: "4rem" },
+          display: "flex",
+          marginRight: { md: "3.5rem", xs: "4rem" },
+          flexWrap: "wrap",
+          // flexDirection: "column",
+          // marginTop: { md: "4rem", xs: "-3rem" },
+          // paddingTop: { xs: "4rem" },
+          // width: "100%",
         }}
       >
         <video
@@ -25,23 +26,16 @@ const TestimonialSection = (props) => {
           playsInline
           poster={preloadImage}
           style={{
-            display: { md: "block" },
+            display: { md: "column" },
             flexDirection: { md: "column" },
-            maxHeight: "400px",
+            minHeight: { md: "auto", xs: "auto" },
             borderRadius: "8px",
+            // justifyItems: "center",
+            // justifyContent: "center",
           }}
         >
           <source src={videoUrl} type="video/mp4" />
         </video>
-        <Typography
-          variant="h5"
-          sx={{
-            marginTop: { xs: "1rem" },
-            color: "#FFF",
-          }}
-        >
-          <b>{props.videoTitle}</b>
-        </Typography>
       </Box>
     </>
   );
