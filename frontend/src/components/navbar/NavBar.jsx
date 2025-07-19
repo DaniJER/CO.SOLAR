@@ -18,12 +18,12 @@ import TestimonialSection from "../home-section/TestimonialSection";
 
 const pages = [
   { name: "Inicio", path: "/" },
-  { name: "Cotizar", path: "/quote" },
+  // { name: "Cotizar", path: "/quote" },
   // { name: "Servicios", path: "/services" },
   { name: "Testimonios", path: "/#testimonial" },
   { name: "Nosotros", path: "/#aboutUs" },
   { name: "Instalaciones", path: "/#installations" },
-  { name: "Iniciar sesión", path: "/login" },
+  // { name: "Iniciar sesión", path: "/login" },
 ];
 
 const NavBar = () => {
