@@ -35,19 +35,19 @@ const LoginForm = () => {
       // Redirigir según rol
       if (role === "office_employee") {
         alert("Ingresaste como empleado de oficina");
-        router.push("/");
+        router.push("/dashboard/office-employee");
       } else if (role === "customer") {
         alert("Ingresaste como cliente");
-        router.push("/");
+        router.push("/dashboard/customer");
       } else if (role === "tech_employee") {
         alert("Ingresaste como tecnico");
-        router.push("/");
+        router.push("/dashboard/tech-employee");
       } else if (role === "super_admin") {
         alert("Ingresaste como super administrador");
-        router.push("/");
+        router.push("/dashboard/super-admin");
       } else if (role === "tech_leader") {
         alert("Ingresaste como lider técnico");
-        router.push("/");
+        router.push("/dashboard/tech-leader");
       } else {
         console.warn("Rol desconocido:", role);
       }

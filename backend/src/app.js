@@ -1,6 +1,8 @@
-const express = require("express");
-const cors = require("cors");
-const authRoutes = require("../routes/authRoutes");
+// app.js
+import express from "express";
+import cors from "cors";
+import authRoutes from "../routes/authRoutes.js";
+import userRoutes from "../routes/users.routes.js";
 
 const app = express();
 
@@ -8,8 +10,9 @@ const app = express();
 app.use(cors({ origin: "http://localhost:3000" }));
 app.use(express.json());
 
-// Rutas
+// Rutas agrupadas con prefijo /api
 app.use("/api", authRoutes);
+app.use(userRoutes);
 
 // Iniciar servidor
 const PORT = process.env.PORT || 5000;

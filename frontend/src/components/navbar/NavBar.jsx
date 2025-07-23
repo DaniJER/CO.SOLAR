@@ -23,7 +23,7 @@ const pages = [
   { name: "Testimonios", path: "/#testimonial" },
   { name: "Nosotros", path: "/#aboutUs" },
   { name: "Instalaciones", path: "/#installations" },
-  // { name: "Iniciar sesión", path: "/login" },
+  { name: "Iniciar sesión", path: "/login" },
 ];
 
 const NavBar = () => {

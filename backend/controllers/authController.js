@@ -1,6 +1,6 @@
-const bcrypt = require("bcrypt");
-const jwt = require("jsonwebtoken");
-const personModel = require("../models/personModel");
+import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
+import personModel from "../models/personModel.js";
 
 const login = async (req, res) => {
   const { email, password } = req.body;
@@ -17,7 +17,15 @@ const login = async (req, res) => {
     const { id, role } = person;
     console.log("ROL DESDE DB:", role);
 
-    if (!["customer", "office_employee", "tech_employee"].includes(role)) {
+    if (
+      ![
+        "customer",
+        "office_employee",
+        "tech_employee",
+        "super_admin",
+        "tech_leader",
+      ].includes(role)
+    ) {
       return res.status(403).json({ mensaje: "Rol inválido" });
     }
 
@@ -32,6 +40,4 @@ const login = async (req, res) => {
   }
 };
 
-module.exports = {
-  login,
-};
+export default { login };

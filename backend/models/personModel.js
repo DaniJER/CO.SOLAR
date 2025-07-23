@@ -1,4 +1,4 @@
-const db = require("../db"); //requerimos el modulo de db
+import db from "../db.js"; //requerimos el modulo de db
 
 //ejecutamos la función la cual hara la query para buscar al usuario por email
 const findUserWithEmail = async (email) => {
@@ -39,7 +39,7 @@ const findUserWithEmail = async (email) => {
 //   }
 // };
 
-module.exports = {
+export default {
   findUserWithEmail,
   // isEmployee,
   // isCustomer,

@@ -1,4 +1,4 @@
-const { Pool } = require("pg");
+import { Pool } from "pg";
 
 const config = {
   user: "postgres",
@@ -10,4 +10,6 @@ const config = {
 
 const pool = new Pool(config);
 
-module.exports = pool;
+export default {
+  query: (text, params) => pool.query(text, params),
+};
