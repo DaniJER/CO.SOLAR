@@ -1,0 +1,38 @@
+/backend
+├── /src
+│   ├── /controllers   <-- Aquí van tus controladores (manejadores de rutas Express)
+│   ├── /models        <-- Aquí van tus modelos (definiciones de esquemas de DB, ORMs, lógica de negocio ligada a datos)
+│   ├── /routes        <-- Aquí van tus definiciones de rutas (express.Router)
+│   ├── /services      <-- (Opcional, pero muy recomendado) Aquí va la lógica de negocio pura, desacoplada de los controladores y modelos directos
+│   ├── /config        <-- Archivos de configuración
+│   ├── /utils         <-- Funciones de utilidad
+│   ├── app.js         <-- Configuración principal de Express
+│   └── server.js      <-- Punto de entrada para iniciar el servidor
+├── package.json
+└── ...
+
+Explicación de cada carpeta:
+controllers: Contiene las funciones que se ejecutan cuando una ruta específica es solicitada. Son los controladores del patrón MVC. Su principal responsabilidad es recibir la solicitud, llamar a la lógica de negocio adecuada (a menudo desde los servicios o modelos) y enviar la respuesta al cliente.
+
+Ejemplo: productController.js con funciones como getAllProducts, getProductById, createProduct.
+models: Aquí defines tus modelos de datos. Si usas un ORM (como Sequelize para PostgreSQL), aquí estarán las definiciones de tus tablas/entidades. También puedes incluir aquí la lógica de negocio directamente relacionada con cómo se estructuran y manipulan los datos. Piensa en ellos como la representación de tus datos y las operaciones básicas sobre ellos.
+
+Ejemplo: User.js (definición de la tabla de usuarios), Product.js.
+routes: Contiene las definiciones de tus rutas API usando express.Router(). Estas rutas conectan las URL con las funciones de los controladores.
+
+Ejemplo: productRoutes.js (router.get('/products', productController.getAllProducts);).
+services (Recomendado): Esta carpeta no es parte del MVC clásico, pero es una excelente práctica en arquitecturas modernas. Aquí colocas la lógica de negocio que es independiente del controlador y del modelo de datos directo. Los controladores llaman a los servicios, y los servicios interactúan con los modelos. Esto ayuda a mantener tus controladores delgados y tu lógica de negocio reutilizable.
+
+Ejemplo: productService.js con funciones como calculateProductPrice, applyDiscount, validateProductStock.
+config: Para configuraciones de la aplicación (variables de entorno, configuración de la base de datos, etc.).
+
+utils: Funciones auxiliares que pueden ser usadas en diferentes partes de tu backend (ej. formateadores de fecha, validadores genéricos).
+
+¿Por qué esta estructura?
+Esta estructura mantiene una clara separación de responsabilidades (SoC - Separation of Concerns):
+
+Las rutas solo definen qué URL se mapea a qué función.
+Los controladores solo se encargan de la interacción HTTP (req, res) y de coordinar.
+Los servicios (si los usas) contienen la lógica de negocio pura.
+Los modelos se encargan de la representación de datos y la interacción con la base de datos.
+Esto hace que tu backend sea mucho más mantenible, escalable y fácil de testear.
